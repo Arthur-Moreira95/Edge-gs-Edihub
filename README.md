@@ -18,7 +18,6 @@ Dispositivo IoT baseado em **Edge Computing** que alerta estudantes sobre prazos
 <p align="center">
   <a href="https://wokwi.com/projects/480972212943588353"><b>🔌 Abrir simulação no Wokwi</b></a> ·
   <a href="https://thingspeak.mathworks.com/channels/3584126"><b>📊 Canal público no ThingSpeak</b></a> ·
-  <a href="https://github.com/HenriqNM/edihub-mock-api"><b>🗂️ API simulada (db.json)</b></a>
 </p>
 
 ---
