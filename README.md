@@ -169,7 +169,8 @@ Com a simulação rodando, clique em cada componente do Wokwi para alterar seu v
 ## 10. Evidências de funcionamento
 
 ### Circuito no Wokwi
-![Circuito no Wokwi](evidencias/01-circuito-wokwi.png)
+![Circuito no Wokwi]<img width="1427" height="688" alt="image" src="https://github.com/user-attachments/assets/993b442c-d88f-4d94-b3bf-27220d071616" />
+
 
 ### Simulação em execução (display + Serial Monitor)
 ![Simulação em execução](evidencias/02-simulacao-execucao.png)
