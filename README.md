@@ -173,13 +173,16 @@ Com a simulação rodando, clique em cada componente do Wokwi para alterar seu v
 
 
 ### Simulação em execução (display + Serial Monitor)
-![Simulação em execução](evidencias/02-simulacao-execucao.png)
+![Simulação em execução]<img width="1040" height="610" alt="image" src="https://github.com/user-attachments/assets/d4c20743-b32e-4a94-a639-a3c0b671ff81" />
+
 
 ### Alerta de prazo crítico (LED vermelho)
-![Alerta de prazo crítico](evidencias/03-alerta-24h.png)
+![Alerta de prazo crítico]<img width="1189" height="684" alt="image" src="https://github.com/user-attachments/assets/728d1d6f-bb74-4e54-85b2-a00488d87048" />
+
 
 ### Gráficos no ThingSpeak
-![Gráficos no ThingSpeak](evidencias/04-thingspeak-graficos.png)
+![Gráficos no ThingSpeak]<img width="1465" height="854" alt="image" src="https://github.com/user-attachments/assets/cccc592f-614a-443d-a364-e0655fbc3db3" />
+
 
 📊 Dados ao vivo: https://thingspeak.mathworks.com/channels/3584126
 
