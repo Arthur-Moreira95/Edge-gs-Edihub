@@ -1,15 +1,25 @@
-# Edihub Totem Escolar — Painel IoT Interativo de Editais
+<h1 align="center">📚 Edihub Totem Escolar</h1>
+<p align="center"><b>Painel IoT interativo de editais nas escolas</b></p>
 
-> **Global Solution 2026.2 · CitizenTech · Edge Computing & Computer Systems**
-> FIAP · Engenharia de Software · 1º ano · Rio de Janeiro
+<p align="center">
+  <img src="https://img.shields.io/badge/ESP32-Wokwi-E7352C?logo=espressif&logoColor=white" alt="ESP32">
+  <img src="https://img.shields.io/badge/IoT-ThingSpeak-0076A8" alt="ThingSpeak">
+  <img src="https://img.shields.io/badge/Edge-Computing-2E7D32" alt="Edge Computing">
+  <img src="https://img.shields.io/badge/ODS-4%20%7C%2010-C5192D" alt="ODS 4 e 10">
+</p>
+
+<p align="center">
+  <b>Global Solution 2026.2 · CitizenTech · Edge Computing & Computer Systems</b><br>
+  FIAP · Engenharia de Software · 1º ano · Rio de Janeiro
+</p>
 
 Dispositivo IoT baseado em **Edge Computing** que alerta estudantes sobre prazos de vestibulares e concursos militares diretamente nos corredores das escolas, além de medir o engajamento presencial dos alunos.
 
-| Recurso | Link |
-| :--- | :--- |
-| 🔌 Simulação no Wokwi | https://wokwi.com/projects/480972212943588353 |
-| 📊 Canal público no ThingSpeak | https://thingspeak.mathworks.com/channels/3584126 |
-| 🗂️ API simulada (`db.json`) | https://github.com/HenriqNM/edihub-mock-api |
+<p align="center">
+  <a href="https://wokwi.com/projects/480972212943588353"><b>🔌 Abrir simulação no Wokwi</b></a> ·
+  <a href="https://thingspeak.mathworks.com/channels/3584126"><b>📊 Canal público no ThingSpeak</b></a> ·
+  <a href="https://github.com/HenriqNM/edihub-mock-api"><b>🗂️ API simulada (db.json)</b></a>
+</p>
 
 ---
 
@@ -120,13 +130,13 @@ Levar os prazos mais urgentes **para dentro da escola**, em um totem físico ins
 ## 7. Estrutura do repositório
 
 ```
-gs-edge/
+Edge-gs-Edihub/
 ├── README.md          → esta documentação
 ├── main.ino           → código-fonte completo do ESP32
 ├── diagram.json       → circuito do Wokwi
 ├── libraries.txt      → bibliotecas usadas no Wokwi
 ├── db.json            → cópia da API simulada (certames)
-└── evidencias/        → imagens da simulação e do ThingSpeak
+└── LICENSE            → licença MIT
 ```
 
 ---
@@ -168,23 +178,42 @@ Com a simulação rodando, clique em cada componente do Wokwi para alterar seu v
 
 ## 10. Evidências de funcionamento
 
-### Circuito no Wokwi
-![Circuito no Wokwi]<img width="1427" height="688" alt="image" src="https://github.com/user-attachments/assets/993b442c-d88f-4d94-b3bf-27220d071616" />
+### 10.1 Circuito montado no Wokwi
 
+<p align="center">
+  <a href="https://wokwi.com/projects/480972212943588353">
+    <img src="https://github.com/user-attachments/assets/993b442c-d88f-4d94-b3bf-27220d071616" alt="Circuito do Edihub Totem Escolar no Wokwi: ESP32 ligado ao HC-SR04, LDR, OLED, LED RGB, buzzer e botão" width="820">
+  </a>
+  <br>
+  <sub>ESP32 DevKit C V4 ligado ao HC-SR04, LDR, display OLED, LED RGB, buzzer e botão. Clique na imagem para abrir a simulação.</sub>
+</p>
 
-### Simulação em execução (display + Serial Monitor)
-![Simulação em execução]<img width="1040" height="610" alt="image" src="https://github.com/user-attachments/assets/d4c20743-b32e-4a94-a639-a3c0b671ff81" />
+### 10.2 Resposta do dispositivo às condições
 
+<table>
+  <tr>
+    <th width="50%">✅ Prazo normal (LED verde)</th>
+    <th width="50%">🚨 Prazo crítico (LED vermelho)</th>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/d4c20743-b32e-4a94-a639-a3c0b671ff81" alt="Simulação com LED verde e Serial Monitor mostrando API carregada, presença detectada e envio ao ThingSpeak" width="100%"></td>
+    <td><img src="https://github.com/user-attachments/assets/728d1d6f-bb74-4e54-85b2-a00488d87048" alt="Simulação na categoria militar com LED vermelho e alerta de últimas 24 horas" width="100%"></td>
+  </tr>
+  <tr>
+    <td><sub>API carregada (<code>[API] 5 certames carregados</code>), aluno detectado a 2 cm (<code>[PRESENCA]</code>) e telemetria aceita pelo ThingSpeak (<code>HTTP 200</code>).</sub></td>
+    <td><sub>Após o botão alternar para <b>MILITAR</b>, o certame mais urgente fica a menos de 24 h: LED vermelho piscando, aviso “ULTIMAS 24H!” e bipe.</sub></td>
+  </tr>
+</table>
 
-### Alerta de prazo crítico (LED vermelho)
-![Alerta de prazo crítico]<img width="1189" height="684" alt="image" src="https://github.com/user-attachments/assets/728d1d6f-bb74-4e54-85b2-a00488d87048" />
+### 10.3 Telemetria no ThingSpeak
 
-
-### Gráficos no ThingSpeak
-![Gráficos no ThingSpeak]<img width="1465" height="854" alt="image" src="https://github.com/user-attachments/assets/cccc592f-614a-443d-a364-e0655fbc3db3" />
-
-
-📊 Dados ao vivo: https://thingspeak.mathworks.com/channels/3584126
+<p align="center">
+  <a href="https://thingspeak.mathworks.com/channels/3584126">
+    <img src="https://github.com/user-attachments/assets/cccc592f-614a-443d-a364-e0655fbc3db3" alt="Gráficos do canal Global Solution Edge Computing no ThingSpeak com os campos Aproximacoes, Certame consultado e Luz ambiente" width="820">
+  </a>
+  <br>
+  <sub>Canal público <b>Global Solution Edge Computing</b> (ID 3584126) recebendo os 3 campos enviados pelo ESP32. Clique na imagem para ver os dados ao vivo.</sub>
+</p>
 
 ---
 
